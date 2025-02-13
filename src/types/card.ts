@@ -1,6 +1,10 @@
-export interface Cards {
-    id: number;
-    title: string;
+export type Card = {
     icon: string;
-    percentage: number;
-}
+    title: string;
+    number: string;
+    percentage?: string;
+    tag?: string;
+  };
+  
+  export type Cards = Card[];
+  
