@@ -1,7 +1,5 @@
 {
     "rankings": [
-      { "id":1, "title": "Current Jobs", "number": "160", "icon": "🛄"},
-      { "id":2, "title": "Messages", "number": "220", "icon": "💬", "percentage": "3.46 %","tag":"Since last Month"},
-      { "id":3, "title": "Performance", "number": "160", "icon": "📈", "percentage": "1.20 %","tag":"Since last Year"}
+      { "id":1, "title": "Current Jobs", "number": "160", "icon": "🛄"}
     ]
  }
