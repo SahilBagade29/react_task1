@@ -5,36 +5,45 @@ import Card from '../components/Card.tsx';
 import '../styles/Card.css';
 
 const Home: React.FC = () => {
-    const [cards, setCards] = useState<Cards>([]);
+  const [cards, setCards] = useState<Cards>([]);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-    useEffect(() => {
-        const fetchCards = async () => {
-            const data = await getCard();
-            setCards(data);
-        };
-        fetchCards();
-    }, []);
+  useEffect(() => {
+    const fetchCards = async () => {
+      const data = await getCard();
+      setCards(data);
+    };
+    fetchCards();
+  }, []);
 
-    // Create an array of 20 items by repeating the fetched data
-    const repeatedCards = Array.from({ length: 20 }, (_, i) => cards[i % cards.length]);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode');
+  };
 
-    if (cards.length === 0) {
-      return <div>Loading...</div>;
+  if (cards.length === 0) {
+    return <div>Loading...</div>;
   }
-    return (
-        <div className="card-container">
-            {repeatedCards.map((item, index) => (
-                <Card
-                    key={index}
-                    icon={item.icon}
-                    title={item.title}
-                    number={item.number}
-                    percentage={item.percentage} 
-                    tag={item.tag} 
-                />
-            ))}
-        </div>
-    );
+
+  return (
+    <div className="home-container">
+      <button onClick={toggleDarkMode} className="toggle-button">Toggle Dark Mode</button>
+      <div className="card-container">
+        {cards.map((item, index) => (
+          <Card
+            key={index}
+            icon={item.icon}
+            title={item.title}
+            number={item.number}
+            percentage={item.percentage}
+            tag={item.tag}
+            bgColor={isDarkMode ? "#000000" : "#FFFFFF"}  // Background color based on dark mode
+            fontColor={isDarkMode ? "#FFFFFF" : "#000000"}  // Font color based on dark mode
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Home;

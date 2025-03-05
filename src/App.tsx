@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home.tsx';
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import ContactPage from './pages/ContactPage.tsx';
+<<<<<<< HEAD
 
 function App() {
   return (
@@ -14,6 +15,20 @@ function App() {
    </Routes>
 </BrowserRouter>
   
+=======
+import ServicePage from './pages/ServicePage.tsx';
+
+function App() {
+  return (
+    <BrowserRouter>
+    <Routes>
+     <Route path='/' element={<Home />}/> 
+     <Route path='/contact' element={<ContactPage />}/> 
+     <Route path='/service' element={<ServicePage />}/> 
+      </Routes>
+      </BrowserRouter>
+
+>>>>>>> origin/master
   );
 }
 

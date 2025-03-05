@@ -1,4 +1,4 @@
-
+/* Card.css */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -6,6 +6,28 @@ body {
     align-items: center;
     margin: 0px;
     background-color: #f0f0f0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.home-container {
+    padding: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button {
+    padding: 5px 10px;
+    margin-bottom: 130px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .card-container {
@@ -19,35 +41,46 @@ body {
 .card {
     border-radius: 10px;
     padding: 20px;
+<<<<<<< HEAD
     width: 300px;
     height: 130px;
+=======
+    width: 330px;
+    height: 200px;
+>>>>>>> origin/master
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     background-color: #fff;
     color: #060606;
     transform: rotate(330deg);
+=======
+    transition: background-color 0.3s, color 0.3s;
+    transform: rotate(330deg);
+    position: relative;
+>>>>>>> origin/master
 }
 
 .card:nth-child(odd) {
     background-color: rgb(248, 249, 246);
-  }
+}
   
-  .card:nth-child(even) {
+.card:nth-child(even) {
     background-color: rgb(18, 18, 18);
     color: #fff;
-  }
-  
+}
+
 .card-icon {
     font-size: 2.2em;
-    position: absolute; /* Add this line */
-    top: 20px; /* Adjust as needed */
-    right: 25px; /* Adjust as needed */
+    position: absolute;
+    top: 60px;
+    right: 25px;
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Make it round */
+    border-radius: 50%;
     background-color: #8b1313;
     display: flex;
     justify-content: center;
@@ -55,27 +88,27 @@ body {
 }
 
 .card-number {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     margin-right: auto;
+    margin-top: -140px;
 }
 
 .card-title {
     font-size: 1.2em;
     margin-bottom: 10px;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .card-percentage {
     font-size: 0.9em;
     color: rgb(0, 128, 2);
-    margin-right: auto
+    margin-right: auto;
 }
 
-.card-tag{
+.card-tag {
     font-size: 0.9em;
     color: rgb(80, 81, 80);
     margin-left: -50px;
     margin-top: -22px;
-    
 }

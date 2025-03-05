@@ -1,6 +1,9 @@
 {
     "rankings": [
       { "id":1, "title": "Current Jobs", "number": "160", "icon": "🛄"}
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/master
     ]
  }

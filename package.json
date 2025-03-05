@@ -16,7 +16,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "json-server": "json-server --watch jobcard.json --port 5010"
+=======
+    "json-server1": "json-server --watch jobcard.json --port 5001",
+    "json-server2": "json-server --watch contactCard.json --port 5002",
+    "json-server3": "json-server --watch serviceCard.json --port 5003"
+>>>>>>> origin/master
   },
   "eslintConfig": {
     "extends": [
